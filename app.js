@@ -1,17 +1,17 @@
 // modules import
-const express = require("express")
-const bodyParser = require("body-parser")
-const memberController = require("./controllers/MemberController")
+const express = require("express");
+const bodyParser = require("body-parser");
+const memberController = require("./controllers/MemberController");
 
 // db instance connection
-require("./config/db")
+require("./config/db");
 
 // initialize express
-const app = express()
+const app = express();
 
-const port = 8890
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+const port = 8890;
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // --- API ENDPOINTS ---
 
@@ -23,7 +23,7 @@ app
 // to create a new member  
 app
   .route("/member/create")
-  .post(memberController.createNewMember)
+  .post(memberController.createNewMember);
 
 app
   .route("/member/:id")
@@ -39,5 +39,5 @@ app
 
 // displaying a message when server is running
 app.listen(port, () => {
-  console.log(`Server is running on locahost:${port}`)
-})
+  console.log(`Server is running on locahost:${port}`);
+});

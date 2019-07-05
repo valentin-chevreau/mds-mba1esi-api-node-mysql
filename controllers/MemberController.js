@@ -59,7 +59,7 @@ exports.updateMember = (req, res) => {
     }
     res.status(200).json(results)
   })
-  console.log(query);
+  console.log(query)
 }
 
 // what to do to delete content of a specific member
@@ -73,4 +73,4 @@ exports.deleteMember = (req, res) => {
     }
     res.status(200).json( { message: "Member successfully deleted", results })
   })
-};
+}
